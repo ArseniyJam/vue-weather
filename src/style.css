@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+   --font-sans: "Winky Rough", sans-serif;
+   --color-primary: var(--color-sky-200);
+   --from-main: var(--color-sky-300);
+   --via-main: var(--color-sky-300);
+   --to-main: var(--color-sky-300);
+}
+
+button {
+   @apply cursor-pointer;
+}
+
+.gradient {
+   @apply bg-gradient-to-t from-(--from-main) via-(--via-main) to-(--to-main);
+}
+
+.section {
+   @apply rounded-2xl bg-primary/80 px-6 py-3;
+}
+
+body {
+   @apply bg-sky-300 text-sky-50 font-bold min-h-screen;
+
+   &.cloud,
+   &.overcast {
+      --color-primary: var(--color-sky-300);
+      --from-main: var(--color-sky-300);
+      --via-main: var(--color-sky-500);
+      --to-main: var(--color-sky-600);
+   }
+   &.rain {
+      --color-primary: var(--color-sky-950);
+      --from-main: var(--color-sky-500);
+      --via-main: var(--color-sky-600);
+      --to-main: var(--color-sky-700);
+   }
+   &.thunder {
+      --color-primary: var(--color-sky-950);
+      --from-main: var(--color-sky-700);
+      --via-main: var(--color-sky-700);
+      --to-main: var(--color-sky-900);
+   }
+}
+
+.location-picker > div {
+   @apply cursor-pointer p-2 hover:bg-primary/60 active:bg-primary/60;
+}
