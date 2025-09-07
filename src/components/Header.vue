@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, ref, watchEffect } from "vue";
+import {  ref, watchEffect } from "vue";
 import { useUserPosition } from "../store/userPosition";
 import Location from "../icons/location.vue";
 import { storeToRefs } from "pinia";

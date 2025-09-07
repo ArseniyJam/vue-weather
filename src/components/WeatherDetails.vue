@@ -6,8 +6,6 @@ const { daysToRender } = defineProps<{
    daysToRender: oneDayDataInterface[];
 }>();
 
-console.log(daysToRender);
-
 const months = [
    "January",
    "February",
@@ -39,7 +37,6 @@ const dayTime = ["morning", "afternoon", "evening", "nigth"];
 
 const screenWidth = ref();
 onMounted(() => {
-   console.log(window.innerWidth);
    screenWidth.value = window.innerWidth;
 });
 </script>

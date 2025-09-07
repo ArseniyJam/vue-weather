@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, watchEffect } from "vue";
 import Calendar from "../icons/calendar.vue";
 import type { oneDayDataInterface } from "../lib/interfaces";
 

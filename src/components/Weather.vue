@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch, watchEffect } from "vue";
+import { computed, ref, watch } from "vue";
 import { useUserPosition } from "../store/userPosition";
 import type {
    currentDataInterface,
@@ -39,7 +39,6 @@ watch(userCity, async (newVal) => {
 
       currentData.value = data.current;
       daysData.value = data.forecast.forecastday;
-      console.log(daysData.value);
 
       weatherKeywords.forEach((word) => {
          if (currentData.value?.condition.text.toLowerCase().includes(word)) {

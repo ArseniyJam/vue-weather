@@ -19,9 +19,10 @@ export const useUserPosition = defineStore("position", () => {
    function setUserPosition(event: Event) {
       if (!event.target) return;
       const target = event.target as HTMLElement;
-
-      userCity.value = target.textContent.split(",")[0];
-      userCountry.value = target.textContent.split(",")[1];
+      if (target.textContent) {
+         userCity.value = target.textContent.split(",")[0];
+         userCountry.value = target.textContent.split(",")[1];
+      }
    }
    getUserPosition();
 
